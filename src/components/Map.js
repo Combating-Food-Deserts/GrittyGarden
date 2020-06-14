@@ -1,93 +1,63 @@
-import React from 'react';
-import { GoogleApiWrapper, InfoWindow, Map, Marker, Polygon } from 'google-maps-react';
+import React, { Component } from 'react';
 
-var triangleCoords = [
-  {lat: 25.774, lng: -80.190},
-  {lat: 18.466, lng: -66.118},
-  {lat: 32.321, lng: -64.757},
-  {lat: 25.774, lng: -80.190}
-];
 
-class GoogleMapsContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: {}
+/* Import data */
+import letters from '../data/la_deserts.json';
+var map;
+
+class Map extends Component {
+    constructor(props) {
+        super(props);
+        this.onScriptLoad = this.onScriptLoad.bind(this)
     }
 
-    this.data = [
-      [
-        {lat: 34.055388, lng:-118.099591},
-        {lat: 34.055032, lng:-118.125781},
-        {lat: 34.036179, lng:-118.116002},
-        {lat: 34.043338, lng:-118.101714},
-      ]
-    ]
-    // binding this to event-handler functions
-    this.onMarkerClick = this.onMarkerClick.bind(this);
-    this.onMapClick = this.onMapClick.bind(this);
-  }
-
-  onMarkerClick = (props, marker, e) => {
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-  }
-
-  onMapClick = (props) => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
+    onScriptLoad() {
+        // CREATE YOUR GOOGLE MAPS
+        map = new window.google.maps.Map(
+          document.getElementById('map'),
+           {
+                // ADD OPTIONS LIKE STYLE, CENTER, GESTUREHANDLING, ...
+                center: { lat: 34.053345, lng: -118.242349 },
+                zoom: 9.75,
+                gestureHandling: 'greedy',
+                disableDefaultUI: true
+            });
+        // desert strokeColor: #f45516 fillColor: #f4932c
+        map.data.setStyle({
+          strokeColor: "#246223",
+          strokeOpacity: 0.8,
+          strokeWeight: 1.5,
+          fillColor: "#1B9F18",
+          fillOpacity: 0.65
+        });
+        map.data.addGeoJson(letters)
     }
-  }
 
-  render() {
 
-    return (
-      <Map
-        item
-        xs = { 12 }
-        google = { this.props.google }
-        onClick = { this.onMapClick }
-        zoom = { 10 }
-        initialCenter = {{ lat: 33.885348, lng: -118.207343 }}
-        className = "map"
-      >
-        {
-          this.data.map((paths, idx) =>
-          <Polygon
-            key={Math.random(idx)}
-            paths={paths}
-            strokeColor="#246223"
-            strokeOpacity= {0.8}
-            strokeWeight= {1}
-            fillColor="#1B9F18"
-            fillOpacity={0.5}
-          />)
+    componentDidMount() {
+        if (!window.google) {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = 'https://maps.google.com/maps/api/js?key=' + process.env.REACT_APP_API_KEY;
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+
+            /* API not loaded, callback after loading*/
+            s.addEventListener('load', e => {
+                this.onScriptLoad()
+            })
+
+        } else {
+            /* API script already loaded */
+            this.onScriptLoad()
         }
+    }
 
-        <Marker
-          onClick = { this.onMarkerClick }
-          title = { 'Changing Colors Garage' }
-          position = {{ lat: 39.648209, lng: -75.711185 }}
-          name = { 'Changing Colors Garage' }
-        />
-        {/* <InfoWindow
-          marker = { this.state.activeMarker }
-          visible = { this.state.showingInfoWindow }
-        >
-        </InfoWindow> */}
-      </Map>
-    );
-  }
+    render() {
+        return (
+            <div id="map" className="map"  />
+        );
+    }
 }
 
-export default GoogleApiWrapper({
-    apiKey: 'AIzaSyBxPenIpOC7U-TcAgPMzbsdjndf3HtnHXs'
-})(GoogleMapsContainer)
+export default Map

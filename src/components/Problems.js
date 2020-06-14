@@ -5,8 +5,7 @@ function Problems() {
   return (
     <section id="problems">
         <div className="heading">
-          <h2>What are the problems of food deserts?</h2>
-          <p>It has impact on health, education, crime, etc...(write a general statement of issues)</p>
+          <h2>The Socio-Economic Impact of Food Deserts</h2>
         </div>
         <div className="content">
           <div className="half">
@@ -26,13 +25,10 @@ function Problems() {
             </p>
           </div>
           <div className="half">
-            <h3>Crime</h3>
-            <p>Crime is tied to poverty.  A feature of poverty is lack of adequate access to food.  More food that floods the community, the less that feature will contribute to crime, cutting back on crime overall.</p>
-          </div>
-          <div className="half">
-            <h3>Poverty</h3>
+            <h3>Poverty & Crime</h3>
             <p>
-            The wish is to eradicate all poverty.  While doing so, a feature of poverty we want to tackle is hunger.  No low income family should ever feel they should go without food or have low quality food.  Community gardens in conjunction with an earth that is plentiful in producing food will conquer hunger and lack of nutrition.
+            There is a correlation between poverty and violent crime rate. A distinct feature of poverty is lack of adequate access to food. Take active steps toward eradicating food insecurity and poverty. No family should have to go without food or have access to low-quality food. Prioritize ways to provide aid, services, outreach in communities to mitigate the triggers that often contribute to crime.
+
             </p>
           </div>
       </div>

@@ -103,3 +103,8 @@ iframe {
 .action {
   font-style: italic;
 }
+
+.list li{
+  padding-top: 12px;
+  font-size: 1.25em;
+}
