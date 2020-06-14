@@ -49,7 +49,9 @@ function App() {
           <h2>Get Involved!</h2>
           <p>Do you believe in the power of community-led urban agriculture?</p>
           <p>Contact your local rep to bring a Gritty Garden to your community.</p>
-          <h4>Text your 5 digit zip code to (201) 928-5709.</h4>
+          <div className="action">
+            Text your 5 digit zip code to <span className="italic">(201) 928-5709.</span>
+          </div>
         </div>
       </section>
 
