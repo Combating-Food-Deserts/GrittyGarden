@@ -18,7 +18,7 @@ function App() {
       <section id="intro">
         <div className="heading">
           <h2>Do you live in a food desert?</h2>
-          <p>According to the USDA, roughly xx% of LA residents live in a food desert.</p>
+          <div className="quote">According to USDA data, an estimated <span className="bold">7%</span> of the total U.S. population live in low-access areas. Roughly <span className="bold">35%</span> of LA residents live in a food desert.</div>
         </div>
         <div className="embed">
           <iframe src="https://www.google.com/maps/d/embed?mid=1YJWjdk3fFHmVgQKyMgZwnODWh5w"></iframe>
@@ -27,9 +27,11 @@ function App() {
       <section id="definition">
         <div className="heading">
           <h2>What is a food desert?</h2>
-          <p>The term “food desert” describes neighborhoods and communities that have limited access to affordable and nutritious foods like fruits, vegetables, and whole grains.</p>
+          <div className="quote">The term “food desert” describes neighborhoods and communities that have limited access to affordable and nutritious foods like fruits, vegetables, and whole grains.</div>
         </div>
         <div className="embed">
+          <h3>LA Food Desert Map</h3>
+
           <iframe src="https://www.youtube.com/embed/wAu8Noo8CxA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </section>
@@ -41,7 +43,7 @@ function App() {
           <h2>Get Involved!</h2>
           <p>Do you believe in the power of community-led urban agriculture?</p>
           <p>Contact your local rep to bring a Gritty Garden to your community.</p>
-          <div className="italic">
+          <div className="quote">
             Text your 5 digit zip code to <span className="italic">(201) 928-5709.</span>
           </div>
         </div>
