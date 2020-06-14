@@ -4,6 +4,7 @@ import GoogleApiWrapper from './components/GoogleMap'
 import Problems from './components/Problems'
 import Solution from './components/Solution'
 import Facts from './components/Facts'
+import Logo from './img/logo.svg'
 import './App.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <div id="navbar">
         <div className="logo">
-          <h1>Gritty Garden</h1>
+          {/* <h1>Gritty Garden</h1> */}
+          <img src={Logo}/>
           <div className="italic">An Urban Gardening Movement</div>
         </div>
       </div>

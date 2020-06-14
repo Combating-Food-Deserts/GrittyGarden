@@ -15,7 +15,7 @@ body {
   font-family: 'Work Sans', 'Roboto', sans-serif;
   font-size: 18px;
   /* margin: 0 10%; */
-  background: linear-gradient(180deg, rgb(254, 255, 218) 0%, rgb(236, 157, 64) 35%, rgb(200, 116, 66) 55%, rgb(156, 210, 241) 70%, rgb(85, 183, 88) 100%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(254, 255, 218) 10%, rgb(236, 157, 64) 35%, rgb(200, 116, 66) 55%, rgb(156, 210, 241) 70%, rgb(85, 183, 88) 100%);
 }
 
 h1 {
@@ -58,10 +58,27 @@ iframe {
 
 .logo {
   font-size: 2.25em;
+
 }
+/*
+.logo h1 {
+  color: #09573a;
+} */
+
+.logo {
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  padding: 12px;
+  margin-top: 75px;
+}
+
+.logo img {
+  height: 125px;
+}
+
 
 #navbar {
   padding: 0 10%;
+
 }
 
 .heading {
