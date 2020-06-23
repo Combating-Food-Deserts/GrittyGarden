@@ -4,7 +4,7 @@ import GoogleApiWrapper from './components/GoogleMap'
 import Problems from './components/Problems'
 import Solution from './components/Solution'
 import Facts from './components/Facts'
-import Logo from './img/logo.svg'
+import Logo from './img/logo.png'
 import './App.css';
 
 function App() {

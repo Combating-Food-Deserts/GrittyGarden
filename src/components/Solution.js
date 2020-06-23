@@ -17,13 +17,13 @@ function Solution() {
           <li><strong>Empowerment:</strong> Create economic sustainability to uplift your community.</li>
         </ul>
       </div>
-      <div className="content">
+      {/* <div className="content">
         <div className="gallery">
           <img src={Garden1} />
           <img src={Garden3} />
           <img src={Garden2} />
         </div>
-      </div>
+      </div> */}
       <div className="embed">
 
         <div className="italic">Find the perfect plot of land for urban gardening!</div>

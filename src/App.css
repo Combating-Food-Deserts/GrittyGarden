@@ -38,7 +38,8 @@ section {
   align-items: center;
   margin: 150px 0;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 50px 10%;
+  padding: 50px 5%;
+
 }
 
 iframe {
@@ -57,27 +58,18 @@ iframe {
 }
 
 .logo {
-  font-size: 2.25em;
-
-}
-/*
-.logo h1 {
-  color: #09573a;
-} */
-
-.logo {
-  /* background-color: rgba(255, 255, 255, 0.85); */
   padding: 12px;
   margin-top: 75px;
+  font-size: 2em;
 }
 
 .logo img {
-  height: 125px;
+  width: 100%;
+  max-width: 550px;
 }
 
-
 #navbar {
-  padding: 0 10%;
+  padding: 0 5%;
 
 }
 
