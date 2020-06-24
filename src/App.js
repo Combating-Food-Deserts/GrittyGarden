@@ -14,7 +14,7 @@ function App() {
         <div className="logo">
           {/* <h1>Gritty Garden</h1> */}
           <img src={Logo}/>
-          <div className="italic">An Urban Gardening Movement</div>
+          <div className="quote">An Urban Gardening Movement</div>
         </div>
       </div>
       <section id="intro">

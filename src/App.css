@@ -14,7 +14,6 @@ html {
 body {
   font-family: 'Work Sans', 'Roboto', sans-serif;
   font-size: 18px;
-  /* margin: 0 10%; */
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(254, 255, 218) 10%, rgb(236, 157, 64) 35%, rgb(200, 116, 66) 55%, rgb(156, 210, 241) 70%, rgb(85, 183, 88) 100%);
 }
 
@@ -38,7 +37,7 @@ section {
   align-items: center;
   margin: 150px 0;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 50px 5%;
+  padding: 50px 10%;
 
 }
 
@@ -59,18 +58,12 @@ iframe {
 
 .logo {
   padding: 12px;
-  margin-top: 75px;
   font-size: 2em;
 }
 
 .logo img {
   width: 100%;
-  max-width: 550px;
-}
-
-#navbar {
-  padding: 0 5%;
-
+  max-width: 650px;
 }
 
 .heading {
@@ -132,13 +125,58 @@ iframe {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 100%;
-  height: auto;
-  padding: 25px 0 50px 0;
 }
 
 .gallery img {
   max-width: 250px;
   height: auto;
-  margin: 0 12px;
+  margin: 12px;
+}
+
+#navbar {
+  background-image: url(./img/seed.jpg);
+  background-position: top left;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.25);
+  padding: 50px 10%;
+}
+
+section#intro {
+  background-image: url(./img/desert.jpg);
+  background-position: top left;
+  background-blend-mode: lighten;
+}
+
+section#definition {
+  background-image: url(./img/desert.jpg);
+  background-position: bottom right;
+  background-blend-mode: lighten;
+}
+
+section#solution {
+  background-image: url(./img/garden3.jpg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  /* background-color: rgba(58, 139, 96, 0.25); */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .content .half {
+    width: 100%;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .logo .quote {
+    font-size: 0.75em;
+    padding: 10px;
+    margin: 0px;
+  }
 }
